@@ -5,13 +5,16 @@ Class Movie {
     private $pubblicationDate;
     private $vote;
     private $description;
-    function __construct(String $_title ,Array $_genres ,String $_pubblicationDate ,Int $_vote ,String $_description = null)
+    private $passedYears;
+    function __construct(String $_title ,Array $_genres ,Int $_pubblicationDate ,Int $_vote ,String $_description = null)
     {
         $this->title = $_title;
         $this->genres = $_genres;
         $this->pubblicationDate = $_pubblicationDate;
         $this->vote = $_vote;
         $this->description = $_description;
+
+        $this->passedYears = $this->getPassedYears();
     }
     public function getTitle()
     {
@@ -57,6 +60,11 @@ Class Movie {
     {
         $this->vote = $_vote;
         return $this;
+    }
+    private function getPassedYears(){
+        date_default_timezone_set('Europe/Rome'); 
+        $currentYear =  date("Y");
+        return $currentYear - $this->pubblicationDate;
     }
 }
 
