@@ -38,7 +38,11 @@ Class Movie {
     }
     public function setGenres($_genres)
     {
-        $this->genres = $_genres;
+        if(count($_genres)){
+            $this->genres = $_genres;
+        }else{
+            $this->genres = null;
+        }
         return $this;
     }
     public function getPubblicationDate()
@@ -74,7 +78,7 @@ Class Movie {
     }
     public function setVote($_vote)
     {
-        if(0 <= $_vote && $_vote >=5){
+        if(0 <= $_vote && $_vote <=5){
             $this->vote = $_vote;
         }else{
             $this->vote = null;

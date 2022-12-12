@@ -14,6 +14,13 @@ $movies = [
         "pubblicationDate" => 2006,
         "vote" => 3,
         "description" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsum, est praesentium et quae aperiam."
+    ],
+    [
+        "title" => "",
+        "genres" => [],
+        "pubblicationDate" => -2006,
+        "vote" => 10,
+        "description" => ""
     ]
 ];
 
