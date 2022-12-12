@@ -21,7 +21,12 @@ Class Movie {
     //setters and getters
     public function getTitle()
     {
-        return $this->title;
+        if($this->title){
+            return $this->title;
+        }else{
+            return "Unknown";
+        }
+        
     }
     public function setTitle($_title)
     {
@@ -34,7 +39,11 @@ Class Movie {
     }
     public function getGenres()
     {
-        return $this->genres;
+        if($this->genres){
+            return $this->genres;
+        }else{
+            return ["Unknown"];
+        }
     }
     public function setGenres($_genres)
     {
@@ -47,7 +56,11 @@ Class Movie {
     }
     public function getPubblicationDate()
     {
-        return $this->pubblicationDate;
+        if($this->pubblicationDate){
+            return $this->pubblicationDate;
+        }else{
+            return null;
+        }
     }
     public function setPubblicationDate($_pubblicationDate)
     {
@@ -60,7 +73,11 @@ Class Movie {
     }
     public function getDescription()
     {
-        return $this->description;
+        if($this->description){
+            return $this->description;
+        }else{
+            return "Not Found";
+        }
     }
     public function setDescription($_description)
     {
@@ -69,12 +86,15 @@ Class Movie {
         }else{
             $this->description = null;
         }
-        
         return $this;
     }
     public function getVote()
     {
-        return $this->vote;
+        if($this->vote){
+            return $this->vote;
+        }else{
+            return null;
+        }
     }
     public function setVote($_vote)
     {
@@ -95,6 +115,10 @@ Class Movie {
             $this->passedYears = null;
         }
         return $this;
+    }
+    public function getPassedYears()
+    {
+        return $this->passedYears;
     }
 }
 

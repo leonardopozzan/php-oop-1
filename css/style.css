@@ -3,3 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(32, 33, 36);
+}
+img{
+    max-width: 100%;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.my-card{
+    width: calc(100% / 2 - 20px);
+    background-color: white;
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    box-shadow: 5px 3px 3px 3px #d2d2d2;
+}
+.img-box{
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 50%;
+}
+.description{
+    padding: 0.5rem;
+    width: 50%;
+}
+.plot{
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.title{
+    font-family: 'Teko', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
