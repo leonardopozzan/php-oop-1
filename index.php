@@ -33,7 +33,6 @@ include_once './data/server.php';
         </h1>
         <div class="form-box">
             <h2>Inserisci un nuovo film...</h2>
-            <div class="instructions">* inserisci i generi senza spazi e separati da virgole</div>
             <form action="index.php" method="post" class="my-form">
                 <div class="d-flex flex-wrap col-6 col-lg-3 align-items-start">
                     <label for="" class="col-4 col-lg-4 pb-2">Titolo</label>
@@ -43,7 +42,7 @@ include_once './data/server.php';
                 </div>
                 <div class="d-flex flex-wrap col-6 col-lg-3 align-items-start"> 
                     <label for="" class="col-6 col-lg-6 ps-1 pb-2">Anno di Uscita</label>
-                    <input type="number" class="col-6 col-lg-6" required name="pubblicationDate">
+                    <input type="number" class="col-6 col-lg-6" required name="pubblicationDate" min="1850">
                     <label for="" class="col-6 col-lg-6 ps-1">Voto</label>
                     <input type="number" class="col-6 col-lg-6" required name="vote" min="0" max="5">
                 </div>
@@ -53,6 +52,7 @@ include_once './data/server.php';
                 </div>
                 <div>
                     <button class="btn btn-dark">Invia</button>
+                    <div class="instructions">* inserisci i generi senza spazi e separati da virgole</div>
                 </div>
             </form>
         </div>
