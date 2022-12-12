@@ -33,22 +33,25 @@ include_once './data/db.php';
         <div class="form-box">
             <h2>Inserisci un nuovo film...</h2>
             <div class="instructions">* inserisci i generi senza spazi e separati da virgole</div>
-            <form action="index.php" method="post" class="my-form">
+            <form action="db.php" method="post" class="my-form">
                 <div class="d-flex flex-wrap col-6 col-lg-3 align-items-start">
                     <label for="" class="col-4 col-lg-4 pb-2">Titolo</label>
-                    <input type="text" class="col-8 col-lg-8">
+                    <input type="text" class="col-8 col-lg-8" required>
                     <label for="" class="col-4 col-lg-4" >Generi</label>
-                    <input type="text" class="col-8 col-lg-8">
+                    <input type="text" class="col-8 col-lg-8" required>
                 </div>
                 <div class="d-flex flex-wrap col-6 col-lg-3 align-items-start"> 
-                    <label for="" class="col-6 col-lg-6 ps-1 pb-2">Data di Uscita</label>
-                    <input type="number" class="col-6 col-lg-6">
+                    <label for="" class="col-6 col-lg-6 ps-1 pb-2">Anno di Uscita</label>
+                    <input type="number" class="col-6 col-lg-6" required>
                     <label for="" class="col-6 col-lg-6 ps-1">Voto</label>
-                    <input type="number" class="col-6 col-lg-6">
+                    <input type="number" class="col-6 col-lg-6" required>
                 </div>
                 <div class="d-flex flex-wrap col-12 col-lg-6 align-items-start mt-2 mt-lg-0">
                     <label for="" class="col-3 col-lg-3 ps-1">Descrizione</label>
-                    <textarea name=""  rows="4" class="col-9 col-lg-9"></textarea>
+                    <textarea name="" rows="4" class="col-9 col-lg-9"></textarea>
+                </div>
+                <div>
+                    <button class="btn btn-dark">Invia</button>
                 </div>
             </form>
         </div>

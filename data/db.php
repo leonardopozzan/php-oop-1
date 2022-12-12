@@ -1,4 +1,5 @@
-<?php $movies = [
+<?php 
+$movies = [
     [
     "title" => "Titanic",
     "genres" => ["Romantico", "Drammatico"],
