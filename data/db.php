@@ -42,4 +42,5 @@ $movies = [
         "vote" => 10,
         "description" => ""
     ]
-];  ?>
+];  
+?>
